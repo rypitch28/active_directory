@@ -38,5 +38,10 @@ New-PSSession -ComputerName 192.168.135.138 -Credential (Get-Credential)
 Enter-PSSession 1  
 
 ```````
+#Joining the workstation to the domian
 
+``````shell
+Add-Computer -DomainName xyz.com -Credential xyz/Administrator -Force -Restart
+
+```````
 

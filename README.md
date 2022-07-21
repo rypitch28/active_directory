@@ -12,11 +12,16 @@
 
 2. Install Active directory windows feature
 
+3. After install Change DNS Server Address back to Desired Address
+
 ```````shell
 Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
 
 Import-Module ADDSDeployment
+
 Install-ADDSForest
+
+Set-DNSClientServerAddress -InterfaceIndex 4 -ServerAddresses 192.168.135.115
 ```````
 -Setting up PSSession From Client Manager to Server
 1. Start WinRM
